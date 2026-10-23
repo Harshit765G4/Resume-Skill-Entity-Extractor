@@ -1,0 +1,34 @@
+﻿
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+
+# Raw and generated datasets
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Annotation source files
+data/annotated/*
+!data/annotated/.gitkeep
+!data/annotated/README.md
+!data/annotated/synthetic_train.jsonl
+!data/annotated/synthetic_eval.jsonl
+
+# Generated model artifacts
+models/*
+!models/.gitkeep
+
+# Generated reports
+reports/*
+!reports/.gitkeep
+
+# Local test artifacts
+sample_resume.pdf
+
+*.egg-info/
