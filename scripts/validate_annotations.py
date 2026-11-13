@@ -52,10 +52,10 @@ if __name__ == "__main__":
     files = [
         Path("data/annotated/synthetic_train.jsonl"),
         Path("data/annotated/synthetic_eval.jsonl"),
+        Path("data/annotated/realistic_eval.jsonl"),
     ]
 
     for path in files:
-        count = validate_file(path)
-        print(f"{path}: {count} valid examples")
+        validate_file(path)
 
     print("Annotation validation passed.")

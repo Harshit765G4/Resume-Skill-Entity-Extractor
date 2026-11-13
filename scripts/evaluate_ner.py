@@ -1,4 +1,5 @@
 
+import argparse
 import json
 from pathlib import Path
 
@@ -7,20 +8,40 @@ from spacy.scorer import Scorer
 from spacy.training import Example
 
 
-
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models" / "resume_ner"
-EVAL_PATH = ROOT / "data" / "annotated" / "synthetic_eval.jsonl"
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Evaluate the trained resume NER model."
+    )
+
+    parser.add_argument(
+        "--data",
+        type=Path,
+        default=ROOT / "data" / "annotated" / "synthetic_eval.jsonl",
+        help="Path to the evaluation JSONL dataset.",
+    )
+
+    args = parser.parse_args()
+    eval_path = args.data
+
+    if not eval_path.is_absolute():
+        eval_path = ROOT / eval_path
+
+    if not eval_path.exists():
+        raise FileNotFoundError(
+            f"Evaluation dataset not found: {eval_path}"
+        )
+
     if not MODEL_PATH.exists():
         raise FileNotFoundError(f"Model not found: {MODEL_PATH}")
 
     nlp = spacy.load(MODEL_PATH)
     examples = []
 
-    with EVAL_PATH.open(encoding="utf-8") as file:
+    with eval_path.open(encoding="utf-8") as file:
         for line in file:
             if not line.strip():
                 continue
@@ -43,6 +64,7 @@ def main():
 
             print(f"\nText: {text}")
             print("Predicted entities:")
+
             if predicted.ents:
                 for entity in predicted.ents:
                     print(f"  {entity.text:<30} {entity.label_}")
@@ -54,12 +76,16 @@ def main():
 
     scores = Scorer().score(examples)
 
+    print(f"\nEvaluation dataset: {eval_path.name}")
+    print(f"Number of examples: {len(examples)}")
+
     print("\n--- Overall entity-level evaluation ---")
     print(f"Precision: {scores['ents_p']:.4f}")
     print(f"Recall:    {scores['ents_r']:.4f}")
     print(f"F1 score:  {scores['ents_f']:.4f}")
 
     print("\n--- Per-label evaluation ---")
+
     per_type = scores.get("ents_per_type", {})
 
     for label in ("SKILL", "JOB_TITLE", "DEGREE", "ORGANIZATION"):
