@@ -34,3 +34,14 @@ sample_resume.pdf
 *.egg-info/
 # Independently authored synthetic evaluation dataset
 !data/annotated/realistic_eval.jsonl
+
+
+# Versioned evaluation dataset v2
+!data/annotated/synthetic_eval_v2.jsonl
+!data/annotated/realistic_eval_v2.jsonl
+
+# Generated reports
+reports/*
+!reports/experiments/
+reports/experiments/*
+!reports/experiments/*.md

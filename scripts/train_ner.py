@@ -13,8 +13,8 @@ from spacy.util import minibatch
 ROOT = Path(__file__).resolve().parents[1]
 TRAIN_PATH = ROOT / "data" / "annotated" / "train.jsonl"
 VALIDATION_PATH = ROOT / "data" / "annotated" / "validation.jsonl"
-MODEL_PATH = ROOT / "models" / "resume_ner"
-BEST_MODEL_PATH = ROOT / "models" / "resume_ner_best"
+MODEL_PATH = ROOT / "models" / "resume_ner_with_negatives"
+BEST_MODEL_PATH = ROOT / "models" / "resume_ner_with_negatives_best"
 
 LABELS = {"SKILL", "JOB_TITLE", "DEGREE", "ORGANIZATION"}
 EPOCHS = 30
@@ -76,8 +76,12 @@ def evaluate_model(nlp, examples):
 def main():
     random.seed(SEED)
 
-    if BEST_MODEL_PATH.exists():
-        shutil.rmtree(BEST_MODEL_PATH)
+    for output_path in (MODEL_PATH, BEST_MODEL_PATH):
+        if output_path.exists():
+            raise FileExistsError(
+                f"Output already exists: {output_path}. "
+                "Choose a new experiment name rather than overwriting it."
+            )
 
     nlp = spacy.blank("en")
     ner = nlp.add_pipe("ner")
@@ -123,9 +127,6 @@ def main():
             best_f1 = f1
             nlp.to_disk(BEST_MODEL_PATH)
             print(f"  Saved new best model (validation F1: {best_f1:.4f})")
-
-    if MODEL_PATH.exists():
-        shutil.rmtree(MODEL_PATH)
 
     shutil.copytree(BEST_MODEL_PATH, MODEL_PATH)
 

@@ -1,11 +1,11 @@
-
+﻿
 import json
 from collections import Counter
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = ROOT / "data" / "annotated" / "synthetic_train.jsonl"
+OUTPUT_PATH = ROOT / "data" / "annotated" / "synthetic_generated_review.jsonl"
 
 LABELS = {"SKILL", "JOB_TITLE", "DEGREE", "ORGANIZATION"}
 
@@ -153,20 +153,22 @@ def build_dataset():
             make_record(text, [(organization, "ORGANIZATION")])
         )
 
+
     # Named degrees and qualifications.
+    # Keep the degree entity separate from its specialization.
     degrees = [
-        "B.Tech in Computer Science",
-        "Bachelor of Engineering",
-        "Bachelor of Science in Statistics",
-        "Master of Computer Applications",
-        "M.Sc. in Data Science",
-        "Ph.D. in Computer Science",
-        "Diploma in Information Technology",
-        "Bachelor of Technology in Information Technology",
-        "Master of Science in Computer Science",
-        "BCA",
-        "MBA in Information Systems",
-        "Master of Engineering in Software Systems",
+        ("B.Tech in Computer Science", "B.Tech"),
+        ("Bachelor of Engineering", "Bachelor of Engineering"),
+        ("Bachelor of Science in Statistics", "Bachelor of Science"),
+        ("Master of Computer Applications", "Master of Computer Applications"),
+        ("M.Sc. in Data Science", "M.Sc."),
+        ("Ph.D. in Computer Science", "Ph.D."),
+        ("Diploma in Information Technology", "Diploma"),
+        ("Bachelor of Technology in Information Technology", "Bachelor of Technology"),
+        ("Master of Science in Computer Science", "Master of Science"),
+        ("BCA", "BCA"),
+        ("MBA in Information Systems", "MBA"),
+        ("Master of Engineering in Software Systems", "Master of Engineering"),
     ]
 
     degree_templates = [
@@ -176,10 +178,11 @@ def build_dataset():
         "Graduated with {value}.",
     ]
 
-    for index, degree in enumerate(degrees):
+    for index, (degree_text, degree_entity) in enumerate(degrees):
         template = degree_templates[index % len(degree_templates)]
-        text = template.format(value=degree)
-        records.append(make_record(text, [(degree, "DEGREE")]))
+        text = template.format(value=degree_text)
+        records.append(make_record(text, [(degree_entity, "DEGREE")]))
+
 
     # Skills in several contexts.
     skills = [
@@ -201,8 +204,8 @@ def build_dataset():
         text = template.format(value=skill)
         records.append(make_record(text, [(skill, "SKILL")]))
 
-    # Detect accidental duplicate sentences.
-        additional_examples = [
+    # Additional mixed-entity examples.
+    additional_examples = [
         (
             "Acme Technologies hired a backend developer who uses Python for automation.",
             [("Acme Technologies", "ORGANIZATION"),
@@ -240,12 +243,12 @@ def build_dataset():
         ),
         (
             "A graduate completed a B.Tech in Computer Science and later used Python.",
-            [("B.Tech in Computer Science", "DEGREE"),
-             ("Python", "SKILL")],
+            [("B.Tech", "DEGREE"),
+            ("Python", "SKILL")],
         ),
         (
             "Candidate completed a Master of Science in Analytics at Westlake University.",
-            [("Master of Science in Analytics", "DEGREE"),
+            [("Master of Science", "DEGREE"),
              ("Westlake University", "ORGANIZATION")],
         ),
         (
@@ -255,13 +258,13 @@ def build_dataset():
         ),
         (
             "An applicant with a Diploma in Information Technology joined Summit Tech as a software engineer.",
-            [("Diploma in Information Technology", "DEGREE"),
+            [("Diploma", "DEGREE"),
              ("Summit Tech", "ORGANIZATION"),
              ("software engineer", "JOB_TITLE")],
         ),
         (
             "After earning a Ph.D. in Computer Science, the researcher joined Deepfield AI.",
-            [("Ph.D. in Computer Science", "DEGREE"),
+            [("Ph.D.", "DEGREE"),
              ("Deepfield AI", "ORGANIZATION")],
         ),
         (
@@ -335,13 +338,14 @@ def build_dataset():
         ),
         (
             "A junior engineer from Pinecrest Labs finished a BCA program and used Git.",
-            [("engineer", "JOB_TITLE"),
+            [("junior engineer", "JOB_TITLE"),
              ("Pinecrest Labs", "ORGANIZATION"),
-             ("BCA", "DEGREE"), ("Git", "SKILL")],
+             ("BCA", "DEGREE"),
+             ("Git", "SKILL")],
         ),
         (
             "The candidate earned an MBA in Information Systems at Broadview Group and knows MySQL.",
-            [("MBA in Information Systems", "DEGREE"),
+            [("MBA", "DEGREE"),
              ("Broadview Group", "ORGANIZATION"),
              ("MySQL", "SKILL")],
         ),
@@ -372,7 +376,7 @@ def build_dataset():
         ),
         (
             "A Bachelor of Science in Statistics graduate joined Meridian AI as a data analyst using Pandas.",
-            [("Bachelor of Science in Statistics", "DEGREE"),
+            [("Bachelor of Science", "DEGREE"),
              ("Meridian AI", "ORGANIZATION"),
              ("data analyst", "JOB_TITLE"),
              ("Pandas", "SKILL")],
@@ -392,7 +396,7 @@ def main():
     records = build_dataset()
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    with OUTPUT_PATH.open("w", encoding="utf-8", newline="\n") as file:
+    with OUTPUT_PATH.open("x", encoding="utf-8", newline="\n") as file:
         for record in records:
             file.write(json.dumps(record, ensure_ascii=False) + "\n")
 

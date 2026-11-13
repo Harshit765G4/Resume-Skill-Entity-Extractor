@@ -136,3 +136,33 @@
 {"text": "The application supports secure data storage and retrieval.", "entities": []}
 {"text": "The research involved analyzing network traffic patterns.", "entities": []}
 {"text": "The portfolio contains projects related to artificial intelligence.", "entities": [{"start": 43, "end": 66, "label": "SKILL"}]}
+{"text": "The team completed the assigned work ahead of schedule.", "entities": []}
+{"text": "The candidate submitted the requested documents before the deadline.", "entities": []}
+{"text": "The project involved reviewing several business requirements.", "entities": []}
+{"text": "The student completed multiple practical assignments.", "entities": []}
+{"text": "The company expanded its operations into new markets.", "entities": []}
+{"text": "The applicant has experience working in collaborative environments.", "entities": []}
+{"text": "The department organized a technical knowledge-sharing session.", "entities": []}
+{"text": "The system processes large volumes of information.", "entities": []}
+{"text": "The candidate participated in several academic activities.", "entities": []}
+{"text": "The team improved the overall workflow.", "entities": []}
+{"text": "The organization provides services to multiple clients.", "entities": []}
+{"text": "The report contains an overview of project activities.", "entities": []}
+{"text": "The applicant completed a postgraduate qualification.", "entities": []}
+{"text": "The company is recruiting for several open positions.", "entities": []}
+{"text": "The student received recognition for academic performance.", "entities": []}
+{"text": "The project focused on improving operational efficiency.", "entities": []}
+{"text": "The candidate has experience managing multiple responsibilities.", "entities": []}
+{"text": "The department reviewed its internal processes.", "entities": []}
+{"text": "The team conducted a detailed performance assessment.", "entities": []}
+{"text": "The applicant participated in extracurricular activities.", "entities": []}
+{"text": "The company opened a new regional office.", "entities": []}
+{"text": "The candidate successfully completed the assigned tasks.", "entities": []}
+{"text": "The report summarizes the findings of the study.", "entities": []}
+{"text": "The organization supports professional development activities.", "entities": []}
+{"text": "The project was completed within the planned timeline.", "entities": []}
+{"text": "The student participated in a university-level competition.", "entities": []}
+{"text": "The team evaluated several possible solutions.", "entities": []}
+{"text": "The applicant attended the scheduled orientation session.", "entities": []}
+{"text": "The company improved its customer support process.", "entities": []}
+{"text": "The candidate worked on multiple academic assignments.", "entities": []}
