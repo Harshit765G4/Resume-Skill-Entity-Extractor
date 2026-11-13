@@ -89,10 +89,50 @@
 {"text": "A project portfolio lists React and Node.js; the candidate seeks a Frontend Developer role.", "entities": [{"start": 26, "end": 31, "label": "SKILL"}, {"start": 36, "end": 43, "label": "SKILL"}, {"start": 67, "end": 85, "label": "JOB_TITLE"}]}
 {"text": "Python and scikit-learn were used by a data analyst at Silverline Analytics.", "entities": [{"start": 0, "end": 6, "label": "SKILL"}, {"start": 11, "end": 23, "label": "SKILL"}, {"start": 39, "end": 51, "label": "JOB_TITLE"}, {"start": 55, "end": 75, "label": "ORGANIZATION"}]}
 {"text": "At Summit Tech, a cybersecurity analyst reviewed networks using Python.", "entities": [{"start": 3, "end": 14, "label": "ORGANIZATION"}, {"start": 18, "end": 39, "label": "JOB_TITLE"}, {"start": 64, "end": 70, "label": "SKILL"}]}
-{"text": "A junior engineer from Pinecrest Labs finished a BCA program and used Git.", "entities": [{"start": 9, "end": 17, "label": "JOB_TITLE"}, {"start": 23, "end": 37, "label": "ORGANIZATION"}, {"start": 49, "end": 52, "label": "DEGREE"}, {"start": 70, "end": 73, "label": "SKILL"}]}
+{"text": "A junior engineer from Pinecrest Labs finished a BCA program and used Git.", "entities": [{"start": 2, "end": 17, "label": "JOB_TITLE"}, {"start": 23, "end": 37, "label": "ORGANIZATION"}, {"start": 49, "end": 52, "label": "DEGREE"}, {"start": 70, "end": 73, "label": "SKILL"}]}
 {"text": "The candidate earned an MBA in Information Systems at Broadview Group and knows MySQL.", "entities": [{"start": 24, "end": 27, "label": "DEGREE"}, {"start": 54, "end": 69, "label": "ORGANIZATION"}, {"start": 80, "end": 85, "label": "SKILL"}]}
 {"text": "Bluebird Systems is seeking a QA Engineer familiar with Docker and SQL.", "entities": [{"start": 0, "end": 16, "label": "ORGANIZATION"}, {"start": 30, "end": 41, "label": "JOB_TITLE"}, {"start": 56, "end": 62, "label": "SKILL"}, {"start": 67, "end": 70, "label": "SKILL"}]}
 {"text": "A cloud engineer at Alpine Networks uses AWS, Python, and Docker.", "entities": [{"start": 2, "end": 16, "label": "JOB_TITLE"}, {"start": 20, "end": 35, "label": "ORGANIZATION"}, {"start": 41, "end": 44, "label": "SKILL"}, {"start": 46, "end": 52, "label": "SKILL"}, {"start": 58, "end": 64, "label": "SKILL"}]}
 {"text": "DataCore hired a database administrator experienced with MySQL databases.", "entities": [{"start": 0, "end": 8, "label": "ORGANIZATION"}, {"start": 17, "end": 39, "label": "JOB_TITLE"}, {"start": 57, "end": 62, "label": "SKILL"}]}
 {"text": "Cedar Innovations hired a frontend developer who builds React applications.", "entities": [{"start": 0, "end": 17, "label": "ORGANIZATION"}, {"start": 26, "end": 44, "label": "JOB_TITLE"}, {"start": 56, "end": 61, "label": "SKILL"}]}
 {"text": "A Bachelor of Science in Statistics graduate joined Meridian AI as a data analyst using Pandas.", "entities": [{"start": 2, "end": 21, "label": "DEGREE"}, {"start": 52, "end": 63, "label": "ORGANIZATION"}, {"start": 69, "end": 81, "label": "JOB_TITLE"}, {"start": 88, "end": 94, "label": "SKILL"}]}
+{"text": "Priya prepared a project report before joining Apex Digital.", "entities": [{"start": 47, "end": 59, "label": "ORGANIZATION"}]}
+{"text": "The candidate has experience building applications with Python.", "entities": [{"start": 56, "end": 62, "label": "SKILL"}]}
+{"text": "A React-based dashboard was developed by the frontend team.", "entities": [{"start": 2, "end": 7, "label": "SKILL"}]}
+{"text": "The backend developer at SilverOak Technologies works with Java.", "entities": [{"start": 4, "end": 21, "label": "JOB_TITLE"}, {"start": 25, "end": 47, "label": "ORGANIZATION"}, {"start": 59, "end": 63, "label": "SKILL"}]}
+{"text": "CloudNova recruited an engineer experienced in TensorFlow.", "entities": [{"start": 0, "end": 9, "label": "ORGANIZATION"}, {"start": 47, "end": 57, "label": "SKILL"}]}
+{"text": "PythonWorks hired a software developer who uses SQL.", "entities": [{"start": 0, "end": 11, "label": "ORGANIZATION"}, {"start": 20, "end": 38, "label": "JOB_TITLE"}, {"start": 48, "end": 51, "label": "SKILL"}]}
+{"text": "The research analyst prepared reports using NumPy.", "entities": [{"start": 4, "end": 20, "label": "JOB_TITLE"}, {"start": 44, "end": 49, "label": "SKILL"}]}
+{"text": "A candidate named Rahul completed a Bachelor of Technology qualification.", "entities": [{"start": 36, "end": 58, "label": "DEGREE"}]}
+{"text": "After earning an MBA, Sneha joined Redwood Consulting.", "entities": [{"start": 17, "end": 20, "label": "DEGREE"}, {"start": 35, "end": 53, "label": "ORGANIZATION"}]}
+{"text": "The organization hired a machine learning specialist familiar with PyTorch.", "entities": [{"start": 25, "end": 52, "label": "JOB_TITLE"}, {"start": 67, "end": 74, "label": "SKILL"}]}
+{"text": "At BlueOrbit Systems, the cloud architect manages AWS infrastructure.", "entities": [{"start": 3, "end": 20, "label": "ORGANIZATION"}, {"start": 26, "end": 41, "label": "JOB_TITLE"}, {"start": 50, "end": 53, "label": "SKILL"}]}
+{"text": "The applicant holds a Master of Computer Applications degree.", "entities": [{"start": 22, "end": 53, "label": "DEGREE"}]}
+{"text": "A software tester at Maple Technologies automated tests with Selenium.", "entities": [{"start": 2, "end": 17, "label": "JOB_TITLE"}, {"start": 21, "end": 39, "label": "ORGANIZATION"}, {"start": 61, "end": 69, "label": "SKILL"}]}
+{"text": "The candidate has worked with Git, Docker, and Kubernetes.", "entities": [{"start": 30, "end": 33, "label": "SKILL"}, {"start": 35, "end": 41, "label": "SKILL"}, {"start": 47, "end": 57, "label": "SKILL"}]}
+{"text": "BrightPath AI appointed Ankit as its data engineer.", "entities": [{"start": 0, "end": 13, "label": "ORGANIZATION"}, {"start": 37, "end": 50, "label": "JOB_TITLE"}]}
+{"text": "The applicant completed a Bachelor of Science degree before learning Python.", "entities": [{"start": 26, "end": 52, "label": "DEGREE"}, {"start": 69, "end": 75, "label": "SKILL"}]}
+{"text": "A network security analyst at IronGate Solutions uses Linux.", "entities": [{"start": 2, "end": 26, "label": "JOB_TITLE"}, {"start": 30, "end": 48, "label": "ORGANIZATION"}, {"start": 54, "end": 59, "label": "SKILL"}]}
+{"text": "The company uses JavaScript for its web applications.", "entities": [{"start": 17, "end": 27, "label": "SKILL"}]}
+{"text": "VertexAI Labs hired a Python developer with experience in Flask.", "entities": [{"start": 0, "end": 13, "label": "ORGANIZATION"}, {"start": 22, "end": 38, "label": "JOB_TITLE"}, {"start": 58, "end": 63, "label": "SKILL"}]}
+{"text": "The applicant earned a Diploma and later joined as a database engineer.", "entities": [{"start": 23, "end": 30, "label": "DEGREE"}, {"start": 53, "end": 70, "label": "JOB_TITLE"}]}
+{"text": "Meera joined QuantumBridge as a natural language processing engineer.", "entities": [{"start": 13, "end": 26, "label": "ORGANIZATION"}, {"start": 32, "end": 68, "label": "JOB_TITLE"}]}
+{"text": "The data engineer developed pipelines using Apache Spark and Python.", "entities": [{"start": 4, "end": 17, "label": "JOB_TITLE"}, {"start": 44, "end": 56, "label": "SKILL"}, {"start": 61, "end": 67, "label": "SKILL"}]}
+{"text": "After graduation, the candidate joined Oakridge Systems as a QA analyst.", "entities": [{"start": 39, "end": 55, "label": "ORGANIZATION"}, {"start": 61, "end": 71, "label": "JOB_TITLE"}]}
+{"text": "A machine learning researcher at DeepCore AI experiments with scikit-learn.", "entities": [{"start": 2, "end": 29, "label": "JOB_TITLE"}, {"start": 33, "end": 44, "label": "ORGANIZATION"}, {"start": 62, "end": 74, "label": "SKILL"}]}
+{"text": "The applicant completed a Master of Engineering and worked with PostgreSQL.", "entities": [{"start": 26, "end": 47, "label": "DEGREE"}, {"start": 64, "end": 74, "label": "SKILL"}]}
+{"text": "The candidate analyzed business data using Python and SQL.", "entities": [{"start": 43, "end": 49, "label": "SKILL"}, {"start": 54, "end": 57, "label": "SKILL"}]}
+{"text": "The project involved building machine learning workflows.", "entities": [{"start": 30, "end": 46, "label": "SKILL"}]}
+{"text": "The team developed software applications for internal use.", "entities": []}
+{"text": "She demonstrated strong technical skills during the project.", "entities": []}
+{"text": "The company improved its cloud infrastructure using AWS.", "entities": [{"start": 52, "end": 55, "label": "SKILL"}]}
+{"text": "The report describes data processing and visualization techniques.", "entities": []}
+{"text": "The applicant completed several academic projects during graduation.", "entities": []}
+{"text": "The engineering team reviewed application performance.", "entities": []}
+{"text": "The organization provides technology consulting services.", "entities": []}
+{"text": "The candidate has experience with database management systems.", "entities": []}
+{"text": "The project focused on natural language processing workflows.", "entities": [{"start": 23, "end": 50, "label": "SKILL"}]}
+{"text": "The team used Python to automate repetitive business tasks.", "entities": [{"start": 14, "end": 20, "label": "SKILL"}]}
+{"text": "The application supports secure data storage and retrieval.", "entities": []}
+{"text": "The research involved analyzing network traffic patterns.", "entities": []}
+{"text": "The portfolio contains projects related to artificial intelligence.", "entities": [{"start": 43, "end": 66, "label": "SKILL"}]}

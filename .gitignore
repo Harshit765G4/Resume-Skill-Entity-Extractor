@@ -32,3 +32,5 @@ reports/*
 sample_resume.pdf
 
 *.egg-info/
+# Independently authored synthetic evaluation dataset
+!data/annotated/realistic_eval.jsonl
